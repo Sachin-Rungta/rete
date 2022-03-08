@@ -2,20 +2,15 @@
 framework: mocha
 preRun:
      command:
-        - npm ci
+        - npm i
 preMerge:
-  env:
-    BABEL_ENV: test
   pattern:
     - "./test/**.ts"
 postMerge:
-  env:
-    BABEL_ENV: test
   pattern: 
     - "./test/**.ts"
 postRun:
      command:
-        - node --version
         - node --version
 configFile: mocharc.yml
 version: 1.0
