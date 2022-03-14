@@ -1,9 +1,11 @@
 ---
 framework: mocha
 preRun:
-     command:
-        - npm ci
+  command:
+    - npm ci
 preMerge:
+  env:
+     BABEL_ENV: test
   pattern:
     - "./test/**.ts"
 postMerge:
